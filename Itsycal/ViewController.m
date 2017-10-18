@@ -412,7 +412,7 @@
 {
     NSString *iconText = [self iconText];
     if (_statusItem) {
-        _statusItem.button.image = ItsycalIconImageForText(iconText);
+        _statusItem.title = iconText;
     }
     [[NSDistributedNotificationCenter defaultCenter] postNotificationName:ItsycalDidUpdateIconNotification object:nil userInfo:@{@"iconText": iconText} deliverImmediately:YES];
 }
